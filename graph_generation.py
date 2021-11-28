@@ -10,9 +10,19 @@ import pandas as pd
 class graph_generator:
     # This function initializes a graph generator based on an input CSV file.
     # The file is read in as a DataFrame to be used with the later functions.
+    # It also corrects some inconsistencies in the .csv file, should they exist.
     def __init__(self, FileWithPredictionsInput):
         self.FileWithPredictionsInput = pd.read_csv(FileWithPredictionsInput)
-        print(self.FileWithPredictionsInput) # Mainly for testing, feel free to comment out
+        stars_type = ['Red Dwarf','Brown Dwarf','White Dwarf','Main Sequence','Super Giants','Hyper Giants']
+        self.FileWithPredictionsInput['Class'] = self.FileWithPredictionsInput['Type'].replace(self.FileWithPredictionsInput['Type'].unique(),stars_type)
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='Blue-white'] = 'Blue-White'
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='Blue White'] = 'Blue-White'
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='Blue white'] = 'Blue-White'
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='yellow-white'] = 'White-Yellow'
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='Yellowish White'] = 'White-Yellow'
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='white'] = 'White'
+        self.FileWithPredictionsInput['Color'].loc[self.FileWithPredictionsInput['Color'] =='yellowish'] = 'Yellowish'
+        # print(self.FileWithPredictionsInput) # Mainly for testing, feel free to comment out
 
     # This function generates a graph of each feature, displays it on the screen,
     # and saves the figure to the computer. Histograms are chosen for this purpose
@@ -21,7 +31,7 @@ class graph_generator:
         plt.close()
 
         # Frequency of Star Colors
-        plt.figure(1, figsize=(13, 10))
+        plt.figure(1, figsize=(12, 8))
         self.FileWithPredictionsInput["Color"].value_counts().plot(kind='bar')
         plt.title("Frequency of Star Colors")
         plt.savefig('color_freqs.png')
@@ -55,19 +65,24 @@ class graph_generator:
     # This does not necessarily include every potential combination at the moment. The overall subplot
     # will look wonky depending on the screen size with plt.show().
     def graph_values(self):
+        plt.close()
         col_headers = list(self.FileWithPredictionsInput.columns)
         col_header_combinations = combinations(col_headers, 2)
         # print(col_headers) # for testing
         # print(list(col_header_combinations)) # for testing
         plotnum = 0
-        value_figure = plt.figure(5, figsize=(25, 25))
+        value_figure = plt.figure(5, figsize=(25, 25), clear=True)
 
         # Iterate through the possible combinations and generate a graph of their features
         for list_element in list(col_header_combinations):
-            print(list_element)
+            # print(list_element) # for testing
+
+            if (list_element[0] == "Color" or list_element[1] == "Color"):
+                continue
+
             plotnum += 1
 
-            if (plotnum > 18):
+            if plotnum > 18:
                 break
 
             ax = value_figure.add_subplot(6, 3, plotnum)
@@ -80,12 +95,7 @@ class graph_generator:
                 fontweight='light'
             )
 
-            # Colors are reported inconsistently throughout the .csv. B/b = blue, W/w = white, Y/y = yellow, R/r = red, O/o = orange.
-            # Yellowish is reported as Y-ish, and so on.
-            if (list_element[1] == "Color"):
-                ax.set_xticklabels(["R", "B W", "W", "Y-ish W", "B w", "Y o", "B", "B-W", "W-ish", "Y-W", "O", "W-Y", "w", "y-ish", "Y-ish", "O-R", "B-W"])
-
-        plt.tight_layout(rect=[2,2,2,2])
+        plt.tight_layout()
         plt.subplots_adjust(hspace=1)
         plt.savefig('features_subplot.png')
         # plt.show() # again, for testing
