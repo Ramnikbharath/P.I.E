@@ -1,5 +1,5 @@
 ### Module Testing: Graph Generation Algorithm
-#### Last committed/pushed 11/25/2021
+#### Last committed/pushed 11/27/2021
 #### PLEASE NOTE: This is ONLY a report of testing this program on its own. Integration testing with the ML algorithm/menu still needs to happen and be reported!
 
 This portion of the stars ML algorithm program generates graphs largely correctly based on the values present in the Kaggle dataset (located here: https://www.kaggle.com/brsdincer/star-type-classification). Note that this is the only dataset I had to work with, so testing of this code is, by necessity, limited.
@@ -7,6 +7,8 @@ This portion of the stars ML algorithm program generates graphs largely correctl
 You may see these results in the Graph Generation Results folder. These graphs are what will be output to the user:
 - Various histograms showing the distribution of data in many of the columns
 - Various bar graphs plotting the values of one column against another. Most of the 21 unique combinations of columns are graphed.
+
+**UPDATE: Any graphs pertaining to color have consistent names for colors, so these graphs are a more realistic depiction of the distribution of colors in the data file.**
 
 Some of the subplots look a bit wonky--it even looks like there is no data in some of them!--but I think that might have something to do with screen size and the fact that I tried to create an 6x3 subplot grid in Matplotlib.
 
@@ -18,6 +20,7 @@ Worth mentioning is that, due to how I coded this, the program will ONLY work if
 - Color
 - Spectral_Class
 - Type
+**UPDATE: This does not seem to be a problem with the results that come from the ML algorithm.**
 
 I may likely tinker around with this some more:
 - [ ] Add the remaining graphs (I personally think that getting ~18 combinations and four other graphs is good, but I can do better for sure)
