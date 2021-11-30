@@ -1,0 +1,6 @@
+##List if needed libraries and versions##
+
+pandas			V#
+scikit-learn	V#
+pickle			V#
+###Other teammates#

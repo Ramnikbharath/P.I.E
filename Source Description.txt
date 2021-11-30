@@ -1,0 +1,4 @@
+StarTypeClassification.ipynb
+	See pdf or jupyter notebook 
+	
+	##Other teammates notes

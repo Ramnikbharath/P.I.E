@@ -1,0 +1,5 @@
+Machine Learning Code:
+	In joblib file; it is a programming object that is exported for ease of use in other programs
+	Jupyter Notebook; Shows process gone through to explore data and decisions for how to create the ML algorithm
+
+##Other teammates code##

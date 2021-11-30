@@ -1,0 +1,2 @@
+Open ##Insert command line UI name here## in IDE
+Click build. ##add steps for additional programming libraries if necessary##
