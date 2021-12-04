@@ -24,7 +24,7 @@
 22,7220,0.00017,0.011,14.23,White,F,2,White Dwarf
 23,8500,0.0005,0.01,14.5,White,A,2,White Dwarf
 24,16500,0.013,0.014,11.89,Blue-White,B,2,White Dwarf
-25,12990,8.5e-05,0.00984,12.23,White-Yellow,F,2,White Dwarf
+25,12990,8.5e-05,0.00984,12.23,White-Yellow,F,2,Main Sequence
 26,8570,0.00081,0.0097,14.2,Blue-White,A,2,White Dwarf
 27,7700,0.00011,0.0128,14.47,White-Yellow,F,2,White Dwarf
 28,11790,0.00015,0.011,12.59,White-Yellow,F,2,White Dwarf
@@ -78,7 +78,7 @@
 76,2890,0.0034,0.24,13.46,Red,M,1,Brown Dwarf
 77,3342,0.0015,0.307,11.87,Red,M,1,Brown Dwarf
 78,2621,0.0006,0.098,12.81,Red,M,1,Brown Dwarf
-79,3158,0.00135,0.161,13.98,Red,M,1,Red Dwarf
+79,3158,0.00135,0.161,13.98,Red,M,1,Brown Dwarf
 80,7100,0.00029,0.012,14.09,White-Yellow,F,2,White Dwarf
 81,10574,0.00014,0.0092,12.02,White,F,2,White Dwarf
 82,8930,0.00056,0.0095,13.78,White,A,2,White Dwarf
@@ -133,12 +133,12 @@
 131,3607,0.00023,0.38,10.34,Red,M,1,Brown Dwarf
 132,3100,0.008,0.31,11.17,Red,M,1,Brown Dwarf
 133,2989,0.0087,0.34,13.12,Red,M,1,Brown Dwarf
-134,3542,0.0009,0.62,14.23,Red,M,1,Red Dwarf
+134,3542,0.0009,0.62,14.23,Red,M,1,Brown Dwarf
 135,3243,0.0023,0.73,14.75,Red,M,1,Red Dwarf
 136,3091,0.0081,0.24,11.43,Red,M,1,Brown Dwarf
-137,3598,0.0011,0.56,14.26,Red,M,1,Red Dwarf
+137,3598,0.0011,0.56,14.26,Red,M,1,Brown Dwarf
 138,3324,0.0034,0.34,12.23,Red,M,1,Brown Dwarf
-139,3541,0.0013,0.256,14.33,Red,M,1,Red Dwarf
+139,3541,0.0013,0.256,14.33,Red,M,1,Brown Dwarf
 140,13420,0.00059,0.00981,13.67,Blue-White,B,2,White Dwarf
 141,21020,0.0015,0.0112,11.52,Blue,B,2,White Dwarf
 142,18290,0.0013,0.00934,12.78,Blue,B,2,White Dwarf
@@ -194,8 +194,8 @@
 192,2994,0.0072,0.28,13.45,Red,M,1,Brown Dwarf
 193,3212,0.0016,0.378,12.854,Red,M,1,Brown Dwarf
 194,3523,0.0054,0.319,12.43,Red,M,1,Brown Dwarf
-195,3598,0.0027,0.67,13.667,Red,M,1,Red Dwarf
-196,3142,0.00132,0.258,14.12,Red,M,1,Red Dwarf
+195,3598,0.0027,0.67,13.667,Red,M,1,Brown Dwarf
+196,3142,0.00132,0.258,14.12,Red,M,1,Brown Dwarf
 197,3496,0.00125,0.336,14.94,Red,M,1,Red Dwarf
 198,3324,0.0065,0.471,12.78,Red,M,1,Brown Dwarf
 199,3463,0.0027,0.675,14.776,Red,M,1,Red Dwarf
@@ -235,7 +235,7 @@
 233,27739,849420.0,1252.0,-7.59,Blue-White,B,5,Hyper Giants
 234,21904,748490.0,1130.0,-7.67,Blue-White,B,5,Hyper Giants
 235,38940,374830.0,1356.0,-9.93,Blue,O,5,Hyper Giants
-236,30839,834042.0,1194.0,-10.63,Blue,O,5,Hyper Giants
+236,30839,834042.0,1194.0,-10.63,Blue,O,5,Super Giants
 237,8829,537493.0,1423.0,-10.73,White,A,5,Hyper Giants
 238,9235,404940.0,1112.0,-11.23,White,A,5,Hyper Giants
 239,37882,294903.0,1783.0,-7.8,Blue,O,5,Hyper Giants
